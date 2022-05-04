@@ -222,7 +222,7 @@ VaticanP=pd.Series(Vatican).sort_index()
 
 """to get series into .csv, uncomment line and fill in with wanted file. Freq was calcualted in spreadsheets
 then converted from spreadsheet to csv for later plots"""
-#WeberP.to_csv("weberS.csv")
+WeberP.to_csv("weberS.csv")
 
 
 
