@@ -12,7 +12,7 @@ HegelFreq=pd.read_csv('hegelFreq.csv')
 MacyFreq=pd.read_csv('macyFreq.csv')
 MontFreq=pd.read_csv('montFreq.csv')
 WeberFreq=pd.read_csv('webFreq.csv')
-
+WilsonFreq=pd.read_csv('WilsonFreq.csv')
 
 plt.rcParams['font.sans-serif'] = "Times New Roman"
 plt.rcParams['font.family'] = "sans-serif"
@@ -29,16 +29,19 @@ HegelFreq['Rolling'] = HegelFreq['Frequence'].rolling(5).mean()
 MacyFreq['Rolling'] = MacyFreq['Frequence'].rolling(5).mean()
 MontFreq['Rolling'] = MontFreq['Frequence'].rolling(5).mean()
 WeberFreq['Rolling'] = WeberFreq['Frequence'].rolling(5).mean()
+WilsonFreq['Rolling'] = WilsonFreq['Frequence'].rolling(5).mean()
 
 HegelFreq['Rolling']= 100*HegelFreq['Rolling']
 MacyFreq['Rolling']= 100*MacyFreq['Rolling']
 MontFreq['Rolling']= 100*MontFreq['Rolling']
 WeberFreq['Rolling']= 100*WeberFreq['Rolling']
+WilsonFreq['Rolling']= 100*WilsonFreq['Rolling']
 
 plt.plot(HegelFreq['Hegel'], HegelFreq['Rolling'], label = "Hegel", color="gainsboro",linewidth=1, linestyle="dashed")
 plt.plot(MacyFreq['Year'], MacyFreq['Rolling'], label = "Macy", color="darkgrey",linewidth=1, linestyle="dotted")
 plt.plot(MontFreq['Year'], MontFreq['Rolling'], label = "Montesquieu", color="dimgrey",linewidth=1, linestyle="dashdot")
 plt.plot(WeberFreq['Year'], WeberFreq['Rolling'], label = "Weber", color="black",linewidth=1, linestyle="solid")
+plt.plot(WilsonFreq['Year'], WilsonFreq['Rolling'], label = "Wilson", color="lightgrey",linewidth=1, linestyle="solid")
 
 
 plt.legend(loc=1, prop={'size': 7})
