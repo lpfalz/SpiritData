@@ -11,7 +11,7 @@ plt.rcParams['font.sans-serif'] = "Times New Roman"
 plt.rcParams['font.family'] = "sans-serif"
 
 #add ['author', count] tuple to list to add it to graph
-author_count=[['Aristotle', 18],['Pye',52],['Diamond',74],['Ruggiero', 135],['Wilson',309],['Beard', 161],['Weber',232],['Hegel',315],['Macy',382],['Montesquieu',675]]
+author_count=[['Aristotle', 18],['Pye',52],['Diamond',74],['Ruggiero', 135],['Wilson',309],['Beard', 161],['Weber',232],['Hegel',299],['Macy',382],['Montesquieu',675]]
 sorted_count=sorted(author_count, key=lambda x: x[1])
 
 category=[x[0] for x in sorted_count]
@@ -24,4 +24,3 @@ ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
 plt.savefig("countsNoReligion.png",dpi=200, bbox_inches="tight")
 plt.show()
-# I am hungry
